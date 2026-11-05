@@ -1,11 +1,26 @@
-//! SigmaOS-vim — Vim and editor integration for SigmaOS
-//!
-//! Part of the SigmaOS multi-repository ecosystem.
-//! See https://github.com/AaryanSinghChauhan09/SigmaOS for details.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct EditorBuffer {
+    pub file_path: String,
+    pub line_count: usize,
+    pub modified: bool,
+}
 
-#![allow(dead_code)]
+impl EditorBuffer {
+    pub fn open(path: &str, lines: usize) -> Self {
+        Self { file_path: path.into(), line_count: lines, modified: false }
+    }
+}
 
-/// Module entry point for SigmaOS-vim
-pub fn version() -> &'static str {
-    env!("CARGO_PKG_VERSION")
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_editor_buffer_aaa() {
+        // Arrange & Act
+        let buf = EditorBuffer::open("/etc/hosts", 12);
+        // Assert
+        assert_eq!(buf.file_path, "/etc/hosts");
+        assert_eq!(buf.line_count, 12);
+        assert!(!buf.modified);
+    }
 }

@@ -1,0 +1,6 @@
+[component]
+name = "SigmaOS-vim"
+tier = 4
+description = "Vim/Xed text editor integration, syntax highlighting, and plugin bundle"
+contracts = ['vim-bindings', 'syntax-highlighting-pack', 'editor-integration']
+upstream_inspirations = ['https://github.com/linuxmint/xed']
