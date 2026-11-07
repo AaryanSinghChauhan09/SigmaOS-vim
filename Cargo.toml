@@ -3,4 +3,6 @@ name = "sigmaos_vim"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[lib]
+name = "sigmaos_vim"
+path = "src/lib.rs"
