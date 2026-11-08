@@ -2,6 +2,8 @@
 name = "sigmaos_vim"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "SigmaOS vim component inspired by Linux Mint / Omarchy / Arch Linux."
 
 [lib]
 name = "sigmaos_vim"
